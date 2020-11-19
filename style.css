@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15pt;
+    height: 100vh;
+}
+.container {
+    width: 30px;
+    height:30px;
+    position: absolute;
+    display: flex; 
+    justify-content:center; 
+    align-items: center
+}
+
+.circle {
+    width: 30px; 
+    height: 30px; 
+    position: absolute;
+    border-radius: 50%;
+    animation: 400ms ease 1 animate;
+}
+
+@keyframes animate {
+    from{
+        width: 0;
+        height: 0;
+        opacity: 1
+    } to{
+        width: 60px;
+        height: 60px;
+        opacity: 0.7
+    }
+}
+
+
+.boxMessage {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    animation: both animateMessage 1 800ms ease; 
+}
+
+@media screen and (min-width: 700px){
+    .boxMessage {
+        font-size: 30px;
+    }
+}
+
+@keyframes animateMessage{ 
+    from{
+        opacity: 0
+    }to {
+        opacity: 1
+    }
+}
+.boxMessageAnimationRemove {
+    animation: both animateMessageRemove 1 800ms ease;
+}
+
+@keyframes animateMessageRemove {
+    from{
+        opacity: 1
+    } to {
+        opacity: 0
+    }
+}
